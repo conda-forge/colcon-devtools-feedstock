@@ -1,17 +1,17 @@
 {% set name = "colcon-devtools" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: f0e2d967046e5dfbc723b6df23a6241f427aef806a2e4ecfcf9cece24b00ad7a
+  sha256: 1c7d7e083d3bfed625e8f88a3fbbd104dd287be1fcf1323d049e5ed05a62f28b
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
